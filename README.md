@@ -2,7 +2,7 @@
 
 ## How to use
 
-```
+```hcl
 module "rancher_helm" {
     source = "git::git@github.com:SinnConsulting/tf-helm-rancher2-chart.git"
     rancher_settings =  {
