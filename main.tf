@@ -10,5 +10,6 @@ resource "helm_release" "rancher" {
     content {
       name  = setting.key
       value = setting.value
+        }
     }
 }
