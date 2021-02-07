@@ -1,5 +1,8 @@
 # Terraform Rancher Helm Chart
 
+## Pipelines
+![Create Release](https://github.com/SinnConsulting/tf-helm-rancher2-chart/workflows/Create%20Release/badge.svg)
+
 ## How to use
 
 ```hcl
