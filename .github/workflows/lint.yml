@@ -10,10 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
       - name: install tf-docs
-        run:
-          curl -Lo ./terraform-docs https://github.com/terraform-docs/terraform-docs/releases/download/v0.10.1/terraform-docs-v0.10.1-$(uname)-amd64 &&\
-          chmod +x ./terraform-docs &&\
-          sudo mv ./terraform-docs /usr/local/bin/terraform-docs
+        run: GO111MODULE="on" go get github.com/terraform-docs/terraform-docs@v0.10.1
       - uses: pre-commit/action@v2.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
