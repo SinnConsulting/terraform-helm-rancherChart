@@ -5,7 +5,7 @@ resource "helm_release" "rancher" {
   version    = "v${var.rancher_release_version}"
   namespace  = var.rancher_namesapce
   dynamic "set" {
-    for_each = local.rancher_settings
+    for_each = var.rancher_settings
     iterator = setting
     content {
       name  = setting.key
