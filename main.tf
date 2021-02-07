@@ -13,5 +13,3 @@ resource "helm_release" "rancher" {
         }
     }
 }
-
-# test
