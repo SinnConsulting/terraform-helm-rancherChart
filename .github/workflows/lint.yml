@@ -15,4 +15,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
-          PATH: $(go env GOPATH)/src/github.com/terraform-docs/terraform-docs/bin/$(uname | tr '[:upper:]' '[:lower:]')-amd64/terraform-docs
+          PATH: $PATH:$(go env GOPATH)/src/github.com/terraform-docs/terraform-docs/bin/$(uname | tr '[:upper:]' '[:lower:]')-amd64/terraform-docs
