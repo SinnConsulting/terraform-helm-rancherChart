@@ -15,3 +15,34 @@ module "rancher_helm" {
         }
 }
 ```
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.13 |
+| helm | >= 2.0.2 |
+| kubernetes | >= 2.0.2 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| helm | >= 2.0.2 |
+| kubernetes | >= 2.0.2 |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| enable\_rancher | n/a | `bool` | `true` | no |
+| rancher\_namesapce | n/a | `string` | `"cattle-system"` | no |
+| rancher\_release\_branch | n/a | `string` | `"stable"` | no |
+| rancher\_release\_version | n/a | `string` | `"2.4.13"` | no |
+| rancher\_settings | n/a | `map(string)` | `{}` | no |
+
+## Outputs
+
+No output.
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
