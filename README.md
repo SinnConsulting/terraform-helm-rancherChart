@@ -7,7 +7,7 @@
 
 ```hcl
 module "rancher_helm" {
-    source = "git::git@github.com:SinnConsulting/tf-helm-rancher2-chart.git"
+    source = "git::git@github.com:SinnConsulting/terraform-helm-rancherChart.git"
     rancher_settings =  {
         "hostname" = "rancher.example.de",
         "ingress.tls.source" = "letsEncrypt",
