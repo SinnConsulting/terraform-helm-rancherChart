@@ -36,7 +36,7 @@ module "rancher_helm" {
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | enable\_rancher | n/a | `bool` | `true` | no |
-| rancher\_namesapce | n/a | `string` | `"cattle-system"` | no |
+| rancher\_namespace | n/a | `string` | `"cattle-system"` | no |
 | rancher\_release\_branch | n/a | `string` | `"stable"` | no |
 | rancher\_release\_version | n/a | `string` | `"2.4.13"` | no |
 | rancher\_settings | n/a | `map(string)` | `{}` | no |
