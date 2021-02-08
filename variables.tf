@@ -16,7 +16,7 @@ variable "rancher_release_version" {
   default     = "2.4.13"
 }
 
-variable "rancher_namesapce" {
+variable "rancher_namespace" {
   description = ""
   type        = string
   default     = "cattle-system"

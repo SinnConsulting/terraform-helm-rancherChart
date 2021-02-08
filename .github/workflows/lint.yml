@@ -1,14 +1,14 @@
-on:
-  push:
+# on:
+#   push:
 
-name: linting
+# name: linting
 
-jobs:
-  pre-commit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-      - uses: pre-commit/action@v2.0.0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+# jobs:
+#   pre-commit:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: actions/setup-python@v2
+#       - uses: pre-commit/action@v2.0.0
+#         with:
+#           token: ${{ secrets.GITHUB_TOKEN }}
