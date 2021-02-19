@@ -5,7 +5,23 @@
 
 ## How to use
 
+### Terraform Registry 
+
 ```hcl
+module "rancherChart" {
+  source  = "SinnConsulting/rancherChart/helm"
+
+  rancher_settings =  {
+      "hostname" = "rancher.example.de",
+      "ingress.tls.source" = "letsEncrypt",
+      "letsEncrypt.email" = "admin@example.de"
+      }
+}
+```
+
+### Git Repo  
+
+```
 module "rancher_helm" {
     source = "git::git@github.com:SinnConsulting/terraform-helm-rancherChart.git"
     rancher_settings =  {
