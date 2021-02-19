@@ -10,7 +10,12 @@
 ```hcl
 module "rancherChart" {
   source  = "SinnConsulting/rancherChart/helm"
-  version = "0.8.0"
+
+  rancher_settings =  {
+      "hostname" = "rancher.example.de",
+      "ingress.tls.source" = "letsEncrypt",
+      "letsEncrypt.email" = "admin@example.de"
+      }
 }
 ```
 
