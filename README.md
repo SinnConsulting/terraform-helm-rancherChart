@@ -5,8 +5,9 @@
 
 ## How to use
 
-### Terraform Registry 
+### Terraform Registry
 
+#### Let's Encrypt
 ```hcl
 module "rancherChart" {
   source  = "SinnConsulting/rancherChart/helm"
@@ -19,15 +20,42 @@ module "rancherChart" {
 }
 ```
 
-### Git Repo  
+#### Private Certificate
+
+```hcl
+module "rancher_helm" {
+    source = "git::git@github.com:SinnConsulting/terraform-helm-rancherChart.git"
+    rancher_settings =  {
+        "hostname" = "rancher.example.de",
+        "ingress.tls.source" = "secret",
+        }
+}
+```
+[For more information](https://rancher.com/docs/rancher/v2.x/en/installation/resources/advanced/helm2/helm-rancher/tls-secrets/)
+
+
+#### Private certificate signed by private CA
+
+```hcl
+module "rancher_helm" {
+    source = "git::git@github.com:SinnConsulting/terraform-helm-rancherChart.git"
+    rancher_settings =  {
+        "hostname" = "rancher.example.de",
+        "ingress.tls.source" = "secret",
+        "privateCA" = "true"
+        }
+}
+```
+[For more information](https://rancher.com/docs/rancher/v2.x/en/installation/resources/advanced/helm2/helm-rancher/tls-secrets/#using-a-private-ca-signed-certificate)
+
+
+### Git Repo
 
 ```
 module "rancher_helm" {
     source = "git::git@github.com:SinnConsulting/terraform-helm-rancherChart.git"
     rancher_settings =  {
-        "hostname" = "rancher.example.de",
-        "ingress.tls.source" = "letsEncrypt",
-        "letsEncrypt.email" = "admin@example.de"
+        ...
         }
 }
 ```
